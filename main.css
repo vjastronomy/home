@@ -5,7 +5,6 @@
 	--black: 800;
 	--lightSilhouette: rgba(255, 255, 255, 0.5);
 	--darkSilhouette: rgba(0, 0, 0, 0.5);
-	--coal: #23272a;
 	--verdant: #8FBCBB;
 	--ice: #88C0D0;
 	--shallow: #81A1C1;
@@ -149,7 +148,7 @@ section#photos {
 
 section#photos span#photos-tag {
 	font-size: 10px;
-	color: var(--coal);
+	color: black;
 	text-transform: uppercase;
 	
 	background-color: white;
@@ -204,7 +203,7 @@ section#press {
 
 section#press span#press-tag {
 	font-size: 10px;
-	color: var(--coal);
+	color: black;
 	text-transform: uppercase;
 	
 	background-color: white;
