@@ -12,7 +12,16 @@
 	--auroraYellow: #EBCB8B;
 	--auroraGreen: #A3BE8C;
 	--auroraPurple: #B48EAD;
+	--auroraPurpleLight: #DCCBD9;
 	--stock: .15s;
+}
+
+::-moz-selection {
+	background-color: var(--auroraPurpleLight);
+}
+
+::selection {
+	background-color: var(--auroraPurpleLight);
 }
 
 html, body {
@@ -39,18 +48,13 @@ html, body {
 a:link, a:visited {
 	text-decoration: none;
 	
-	border-bottom: 1px solid transparent;
-	padding-bottom: 0;
-	
 	color: var(--auroraPurple);
 	
 	transition: all var(--stock) ease-in-out;
 }
 
 a:hover {
-	text-decoration: none;
-	
-	border-bottom: 1px solid var(--auroraPurple);
+	text-decoration: underline;
 	
 	color: var(--auroraPurple);
 }
@@ -100,7 +104,10 @@ section#menu {
 
 section#menu .menu-item{
 	cursor: pointer;
+	
 	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 section#menu div#menu-left {
@@ -153,7 +160,7 @@ section#photos {
 	margin-top: 15vh;
 }
 
-section#photos span#photos-tag {
+section span.tag {
 	font-size: 10px;
 	color: black;
 	text-transform: uppercase;
@@ -166,6 +173,10 @@ section#photos span#photos-tag {
 	
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 section#photos div#photos-content {
@@ -181,6 +192,10 @@ section#photos div#photos-content {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 
@@ -209,15 +224,6 @@ section#press {
 }
 
 section#press span#press-tag {
-	font-size: 10px;
-	color: black;
-	text-transform: uppercase;
-	
-	background-color: white;
-	
-	display: inline-block;
-	
-	padding: 5px 10px;
 	margin-bottom: 2vh;
 	
 	border-radius: 5px;
@@ -231,6 +237,10 @@ section#press div#press-content {
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+	
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
 }
 
 section#press div#press-content div.press-article {
