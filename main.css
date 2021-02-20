@@ -5,10 +5,8 @@
 	--black: 800;
 	--lightSilhouette: rgba(255, 255, 255, 0.5);
 	--darkSilhouette: rgba(0, 0, 0, 0.5);
-	--verdant: #8FBCBB;
-	--ice: #88C0D0;
-	--shallow: #81A1C1;
-	--deep: #5E81AC;
+	--notQuiteBlack: #23272A;
+	--greyple: #99AAB5;
 	--auroraRed: #BF616A;
 	--auroraOrange: #D08770;
 	--auroraYellow: #EBCB8B;
@@ -27,6 +25,15 @@ html, body {
 	height: 100%;
 	
 	font-family: var(--font);
+	
+	background-color: var(--notQuiteBlack);
+	background-image: url('img/space.svg');
+	background-attachment: fixed;
+	background-size: 95%;
+	background-position: right center;
+	background-repeat: no-repeat;
+	
+
 }
 
 a:link, a:visited {
@@ -258,7 +265,7 @@ section#press div#press-content div.press-article h1.press-article-title {
 section#press div#press-content div.press-article p.press-article-author-date {
 	font-size: 10px;
 	font-weight: var(--book);
-	color: lightgrey;
+	color: var(--greyple);
 }
 
 section.content-section {
