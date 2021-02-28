@@ -1,3 +1,5 @@
+/* Definitions */
+
 :root {
 	--font: 'Inter', Arial, Sans-serif;
 	--book: 400;
@@ -7,56 +9,45 @@
 	--darkSilhouette: rgba(0, 0, 0, 0.5);
 	--notQuiteBlack: #23272A;
 	--greyple: #99AAB5;
-	--auroraRed: #BF616A;
-	--auroraOrange: #D08770;
-	--auroraYellow: #EBCB8B;
-	--auroraGreen: #A3BE8C;
-	--auroraPurple: #B48EAD;
-	--auroraPurpleLight: #DCCBD9;
+	--skyBlue: #DEEFFF;
+	--materialBlue: #2196F3;
 	--stock: .15s;
 }
 
-::-moz-selection {
-	background-color: var(--auroraPurpleLight);
+::selection {
+	background-color: var(--skyBlue);
 }
 
-::selection {
-	background-color: var(--auroraPurpleLight);
+::-moz-selection {
+	background-color: var(--skyBlue);
 }
+
+/* Main */
 
 html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
 	box-sizing: border-box;
-	
-	width: 100%;
-	height: 100%;
-	
+	width: 100vw;
+	height: 100vh;
 	font-family: var(--font);
-	
-	background-color: var(--notQuiteBlack);
-	background-image: url('img/space.svg');
-	background-attachment: fixed;
-	background-size: 95%;
-	background-position: right center;
+	background: url('img/mersing-2019-4.png');
 	background-repeat: no-repeat;
-	
-
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
+	overflow: overlay;
 }
 
 a:link, a:visited {
 	text-decoration: none;
-	
-	color: var(--auroraPurple);
-	
+	color: var(--materialBlue);
 	transition: all var(--stock) ease-in-out;
 }
 
 a:hover {
 	text-decoration: underline;
-	
-	color: var(--auroraPurple);
+	color: var(--materialBlue);
 }
 
 div#wrapper {
@@ -66,56 +57,31 @@ div#wrapper {
 	align-items: center;
 }
 
-/*
-canvas#star-field {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	
-	z-index: -1;
-}
-*/
-
-video#star-field {
-	object-fit: cover;
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	
-	z-index: -1;
-}
-
 section#menu {
 	top: 0;
-	left: 0;
-	right: 0;
 	position: fixed;
-	
-	width: 100vw;
+	width: 90vw;
 	height: 15vh;
-	
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	align-items: center;
-	
 	z-index: 0;
 }
 
-section#menu .menu-item{
+section#menu .menu-item {
 	cursor: pointer;
-	
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
+	margin: 0 0.5vw;
 }
 
 section#menu div#menu-left {
-	width: 25vw;
-	
+	width: 45vw;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 }
 
@@ -124,32 +90,28 @@ section#menu div#menu-left img#menu-logo {
 	width: 100px;
 }
 
-section#menu a {
+section#menu div#menu-right {
+	width: 45vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+section#menu div#menu-right a.menu-item {
 	border: 1px solid transparent;
-	
 	padding: 10px 12px;
-	
 	font-size: 11px;
 	font-weight: var(--bold);
 	text-transform: uppercase;
 	text-decoration: none;
 	color: white;
-	
 	transition: all var(--stock) ease;
 }
 
-section#menu a:hover {
+section#menu div#menu-right a.menu-item:hover {
 	border: 1px solid var(--lightSilhouette);
 	border-radius: 5px;
-}
-
-section#menu div#menu-right {
-	width: 25vw;
-	
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-end;
-	align-items: center;
 }
 
 section {
@@ -164,16 +126,11 @@ section span.tag {
 	font-size: 10px;
 	color: black;
 	text-transform: uppercase;
-	
 	background-color: white;
-	
 	display: inline-block;
-	
 	padding: 5px 10px;
-	
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -182,42 +139,34 @@ section span.tag {
 section#photos div#photos-content {
 	height: 480px;
 	width: auto;
-	
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	
 	border: 1px solid white;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
-	
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 }
 
-
 section#photos div#photos-content div#photos-slideshow {
 	background-size: 100%;
 	background-position: 50% 50%;
-	
 	height: 480px;
-	width: 980px;
+	width: 90vw;
 }
 
 section#photos div#photos-content div#photos-slideshow img {
 	height: 478px;
-	width: 978px;
-	
+	width: calc(90vw - 2);
 	border-top-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	
 	object-fit: cover;
 }
-
 
 section#press {
 	margin-top: 5vh;
@@ -225,19 +174,17 @@ section#press {
 
 section#press span#press-tag {
 	margin-bottom: 2vh;
-	
 	border-radius: 5px;
 }
 
 section#press div#press-content {
-	width: 980px;
-	height: ; /* Set by jQuery */
-	
+	width: 90vw;
+	height: '';
+	/* Set by Custom CSS */
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -246,19 +193,14 @@ section#press div#press-content {
 section#press div#press-content div.press-article {
 	border-left: 5px solid white;
 	border-radius: 5px;
-	
 	height: 80px;
 	width: 100%;
-	
 	padding-left: 20px;
-	
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-evenly;
 	align-items: flex-start;
-	
 	transition: all var(--stock) ease;
-	
 	cursor: pointer;
 }
 
@@ -280,14 +222,13 @@ section#press div#press-content div.press-article p.press-article-author-date {
 
 section.content-section {
 	margin-top: 15vh;
-	width: 980px;
+	width: 90vw;
 }
 
 section div.content-card {
 	background-color: white;
 	border-radius: 5px;
-	
-	padding: 60px;
+	padding: 45px;
 }
 
 section div.content-card h1 {
@@ -297,8 +238,7 @@ section div.content-card h1 {
 
 section div.content-card p {
 	font-size: 14px;
-	line-height: 1.6;
-	
+	line-height: 2;
 	margin-top: 20px;
 }
 
@@ -315,13 +255,11 @@ section div.content-card ul li {
 section div.content-card h2 {
 	font-size: 28px;
 	font-weight: var(--bold);
-	
 	margin-top: 40px;
 }
 
 section div.content-card h3 {
 	font-size: 21px;
 	font-weight: var(--bold);
-	
 	margin-top: 20px;
 }
