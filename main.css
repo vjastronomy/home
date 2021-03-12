@@ -59,7 +59,7 @@ div#wrapper {
 
 section#menu {
 	top: 0;
-	position: fixed;
+	position: absolute;
 	width: 90vw;
 	height: 15vh;
 	display: flex;
@@ -85,9 +85,14 @@ section#menu div#menu-left {
 	align-items: center;
 }
 
-section#menu div#menu-left img#menu-logo {
-	height: 40px;
-	width: 100px;
+section#menu div#menu-left h1 {
+	font-family: 'Big John';
+	font-weight: var(--bold);
+	color: white;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: pointer;
 }
 
 section#menu div#menu-right {
