@@ -1,2 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
-@import url('http://fonts.cdnfonts.com/css/big-john');
+@font-face {
+  font-family: 'Big John';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Big John Regular'), url('font/Big John.woff') format('woff');
+}
